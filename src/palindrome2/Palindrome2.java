@@ -7,6 +7,8 @@
 
 package palindrome2;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,8 +21,11 @@ public class Palindrome2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        ArrayList <String> phrase = new ArrayList();
+        ArrayList <String> phrasebackwards = new ArrayList();
         String  sentence, backwards;
-        int pos, space;
+        int pos, numpal;
+        numpal = 0;
         // get sentence 
         sentence = JOptionPane.showInputDialog(
                 "Words that are the same forwards and backwards are called palindromes.\n"
@@ -31,8 +36,26 @@ public class Palindrome2 {
        for (pos = sentence.length() - 1; pos >= 0; pos--) {
             backwards += sentence.charAt(pos);
         }
+       Collections.addAll (phrasebackwards, backwards);
+       
+       for (int i = 0; i < backwards.length();){
+           String = 
+           System.out.println ());
+           i++;
+       System.out.println (i);
+               }
+       
+       System.out.println (backwards.indexOf(" "));
        System.out.println (backwards);
        System.out.println (sentence);
+       System.out.println (phrasebackwards);
+       
+    // currently ingnore the if and else statements, what it is checking for is not correct
+       if (sentence.equalsIgnoreCase(backwards)) {
+            JOptionPane.showMessageDialog(null, "There are " + numpal + "palindromes in " + sentence);
+        } else {
+            JOptionPane.showMessageDialog(null, "There are no palindromes in " + sentence);
+        }
     }
        
 }
