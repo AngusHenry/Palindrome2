@@ -24,6 +24,7 @@ public class Palindrome2 {
         ArrayList <String> phrase = new ArrayList();
         ArrayList <String> phrasebackwards = new ArrayList();
         String  sentence, backwards;
+        String wordsback = null;
         int pos, numpal;
         numpal = 0;
         // get sentence 
@@ -39,20 +40,33 @@ public class Palindrome2 {
        Collections.addAll (phrasebackwards, backwards);
        
        for (int i = 0; i < backwards.length();){
-           String = 
-           System.out.println ());
+        int end = i-1;
+           if (end == -1){
+          System.out.println ("oops");  
+        }
+        else{
+            if (" ".equals(backwards.substring(end,i ))){
+            System.out.println(" SPACE! ");
+            
+        }
+            else {
+                wordsback += backwards.substring (i,i);
+                System.out.println (backwards.substring(i));
+            }
+           
+        }
+        
+        
+        System.out.println (i);
            i++;
-       System.out.println (i);
                }
-       
-       System.out.println (backwards.indexOf(" "));
        System.out.println (backwards);
        System.out.println (sentence);
        System.out.println (phrasebackwards);
        
     // currently ingnore the if and else statements, what it is checking for is not correct
        if (sentence.equalsIgnoreCase(backwards)) {
-            JOptionPane.showMessageDialog(null, "There are " + numpal + "palindromes in " + sentence);
+            JOptionPane.showMessageDialog(null, "There are " + numpal + " palindromes in " + sentence);
         } else {
             JOptionPane.showMessageDialog(null, "There are no palindromes in " + sentence);
         }
